@@ -28,15 +28,12 @@ def join_nested_strings(src)
       element_index = 0 
       
       while element_index < src[row_index].length do 
-        if src[row_index][element_index].is_a?(Integer)
-          src[row_index].delete_at(element_index)
-        else 
+        if !src[row_index][element_index].is_a?(Integer)
           final_saying << src[row_index][element_index]
         end 
       element_index += 1 
       end 
-      row_index += 1 
+    row_index += 1 
     end 
   final_saying.join(' ')
-  
 end
